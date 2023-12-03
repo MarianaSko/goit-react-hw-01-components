@@ -45,7 +45,7 @@ export const Profile = props => {
           <ItemSpan $opacity="0.5" $fontSize="14px">
             Likes
           </ItemSpan>
-          <ItemSpan $weight="500">{likes}</ItemSpan>
+          <ItemSpan>{likes}</ItemSpan>
         </StatsListItem>
       </StatsList>
     </ProfileWrapper>
