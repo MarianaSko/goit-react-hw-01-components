@@ -21,32 +21,28 @@ export const Profile = props => {
     <ProfileWrapper>
       <DescriprionWrapper>
         <Avatar src={avatar} alt="User avatar" />
-        <UserInfo $fontSize="24px" $weight="700">
+        <UserInfo $fontSize="24px" $weight="700" $opacity="1">
           {username}
         </UserInfo>
-        <UserInfo $fontSize="16px" $opacity="0.5" $weight="500">
-          @{tag}
-        </UserInfo>
-        <UserInfo $fontSize="16px" $opacity="0.5" $weight="500">
-          {location}
-        </UserInfo>
+        <UserInfo>@{tag}</UserInfo>
+        <UserInfo>{location}</UserInfo>
       </DescriprionWrapper>
 
       <StatsList>
         <StatsListItem>
-          <ItemSpan $opacity="0.5" $fontSize="14px" $weight="500">
+          <ItemSpan $opacity="0.5" $fontSize="14px">
             Followers
           </ItemSpan>
-          <ItemSpan $weight="500">{followers}</ItemSpan>
+          <ItemSpan>{followers}</ItemSpan>
         </StatsListItem>
         <StatsListItem>
-          <ItemSpan $opacity="0.5" $fontSize="14px" $weight="500">
+          <ItemSpan $opacity="0.5" $fontSize="14px">
             Views
           </ItemSpan>
-          <ItemSpan $weight="500">{views}</ItemSpan>
+          <ItemSpan>{views}</ItemSpan>
         </StatsListItem>
         <StatsListItem>
-          <ItemSpan $opacity="0.5" $fontSize="14px" $weight="500">
+          <ItemSpan $opacity="0.5" $fontSize="14px">
             Likes
           </ItemSpan>
           <ItemSpan $weight="500">{likes}</ItemSpan>

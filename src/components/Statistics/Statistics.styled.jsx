@@ -41,5 +41,5 @@ export const StatisticsListItem = styled.li`
 export const ItemSpan = styled.span`
   font-size: ${props => props.$fontSize};
   opacity: ${props => props.$opacity};
-  font-weight: ${props => props.$weight};
+  font-weight: 500;
 `;

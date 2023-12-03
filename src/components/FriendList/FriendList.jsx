@@ -4,14 +4,17 @@ export const FriendList = ({ friends }) => {
   return (
     <FriendsWrapper>
       <FriendsList>
-        {friends.map(item => (
-          <FriendListItem
-            key={item.id}
-            avatar={item.avatar}
-            name={item.name}
-            isOnline={item.isOnline}
-          />
-        ))}
+        {friends.map(item => {
+          const { id, avatar, name, isOnline } = item;
+          return (
+            <FriendListItem
+              key={id}
+              avatar={avatar}
+              name={name}
+              isOnline={isOnline}
+            />
+          );
+        })}
       </FriendsList>
     </FriendsWrapper>
   );

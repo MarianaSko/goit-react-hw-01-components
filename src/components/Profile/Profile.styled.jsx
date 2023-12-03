@@ -34,9 +34,9 @@ export const Avatar = styled.img`
 `;
 
 export const UserInfo = styled.p`
-  font-size: ${props => props.$fontSize};
-  opacity: ${props => props.$opacity};
-  font-weight: ${props => props.$weight};
+  font-size: ${props => props.$fontSize || '16px'};
+  opacity: ${props => props.$opacity || '0.5'};
+  font-weight: ${props => props.$weight || '500'};
 `;
 
 export const StatsList = styled.ul`
@@ -60,5 +60,5 @@ export const StatsListItem = styled.li`
 export const ItemSpan = styled.span`
   font-size: ${props => props.$fontSize};
   opacity: ${props => props.$opacity};
-  font-weight: ${props => props.$weight};
+  font-weight: 500;
 `;

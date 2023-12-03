@@ -12,14 +12,17 @@ export const Statistics = ({ title, stats }) => {
     <StatisticsWrapper>
       {title && <StatisticsTitle>{title}</StatisticsTitle>}
       <StatisticsList>
-        {stats.map(item => (
-          <StatisticsListItem $bgColor={getRandomColor()} key={item.id}>
-            <ItemSpan $opacity="0.5" $fontSize="14px" $weight="500">
-              {item.label}
-            </ItemSpan>
-            <ItemSpan $weight="500">{item.percentage}%</ItemSpan>
-          </StatisticsListItem>
-        ))}
+        {stats.map(item => {
+          const { id, label, percentage } = item;
+          return (
+            <StatisticsListItem $bgColor={getRandomColor()} key={id}>
+              <ItemSpan $opacity="0.5" $fontSize="14px">
+                {label}
+              </ItemSpan>
+              <ItemSpan>{percentage}%</ItemSpan>
+            </StatisticsListItem>
+          );
+        })}
       </StatisticsList>
     </StatisticsWrapper>
   );
